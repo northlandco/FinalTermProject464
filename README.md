@@ -1,5 +1,5 @@
 # Universal Spatial Data Mapper
-Leaflet Map template to add various geodata layers to. Refer to Python data manipulation, and other documentation for easy data transformation, spatial joins, and more byb following the steps used to add the current data to the map. Data is visualized and sptially positioned on the Interactive Web Atlas. 
+Leaflet Map template to add various geodata layers to. Refer to Python data manipulation, and other documentation for easy data transformation, spatial joins, and more by following the steps used to add the current data to the map. Data is visualized and sptially positioned on the Interactive Web Atlas. 
 
 ## Summary of Project
 This interactive web atlas allows for easy data visualization of various spatial data sets. This online tool and the attached code demonstrate how various forms of data, such as .csv and .shp can be imported, manipulated, and converted into a .geojson file. Once a .geojson file has been produced using python, it can be added to the data repository folder /src. A corresponding icon image as a .png will also need to be added to the same folder in order to have a visual icon for that layer. 
@@ -11,7 +11,7 @@ Once the JS code has been edited, the newly added layer should appear in the leg
 The interactive atlas features additional imported tools, such as a dynamic scale bar, a search bar, a +/- button for zooming as opposed to scrolling to zoom, and a counter in the top right corner showing the current zoom level.
 
 ## Rationale for Project
-This project was created in order to allow individuals across various fields to be able to easily map out spatial data, regardless of its original data form, at no-cost. The Public Repository functions as a collaborative place where people can add their own .geojson files directly or through various conversion or further data manipulation methods outlined in the termpython.ipynb file. It allows various data spatial data that would likely otherwise not be found together in an interactive atlas, to be combined and added to this map. 
+This project was created in order to allow individuals across various fields to be able to easily map out spatial data, regardless of its original data form, at no-cost. The Public Repository functions as a collaborative place where people can add their own .geojson files directly or through various conversion or further data manipulation methods outlined in the PythonConversions.ipynb file. It allows various data spatial data that would likely otherwise not be found together in an interactive atlas, to be combined and added to this map. 
 
 Suppose a real estate agent has a client who is trying to determine which city or neighbourhood they would like to live in. This client has various factors that are important to making their choice. By adding the various spatial data sets to the map, a visual representation of their spatial distribution can be derived, offering an interactive map with their various important factors appearing. This could allow the client to easily visualize where they would like to live.
 
