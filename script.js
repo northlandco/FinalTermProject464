@@ -10,7 +10,7 @@ var map = L.map('map', {
 
 // link to view source code
 map.attributionControl
-.setPrefix('View <a href="http://github.com/jackdougherty/leaflet-map">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+.setPrefix('View <a href="https://github.com/northlandco/UniveralSpatialDataMapper">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 
 L.Control.geocoder({position: "topleft"}).addTo(map);
 
@@ -245,32 +245,3 @@ $.getJSON("src/CMABoundary.geojson", function (data) {   // insert pathname to y
 });
 
 
-// load polygon geojson, using data to define fillColor, from local directory
-// *TO DO* rebuild file for pop density
-// *TO DO* change from click to hover, and add legend to display colors and hover data
-$.getJSON("src/polygons.geojson", function (data) {   // insert pathname to your local directory file
-  var geoJsonLayer = L.geoJson(data, {
-    style: function (feature) {
-      var fillColor,
-        population = feature.properties.Pop2010;
-      if (population > 100000) fillColor = "#006837";
-      else if (population > 50000) fillColor ="#31a354";
-      else if (population > 15000) fillColor ="#78c679";
-      else if (population > 5000) fillColor ="#c2e699";
-      else if (population > 0) fillColor ="#ffffcc";
-      else fillColor = "#f7f7f7"; // no data
-      return {
-        'color': 'red',
-        'weight': 2,
-        'fillColor': fillColor, // sorts by method above
-        'fillOpacity': 0.8
-      }
-    },
-    onEachFeature: function( feature, layer) {
-      var popupText = "<b>" + feature.properties.Town + "</b>"   // replace labels with those from your own geojson
-         + "<br>Population 2010: " + "<br>" + feature.properties.Pop2010;
-      layer.bindPopup(popupText);
-    }
-  });  // insert ".addTo(map)" to display layer by default
-  controlLayers.addOverlay(geoJsonLayer, 'Polygons filled (CT Pop 2010)');  // insert your 'Title' to add to legend
-});
