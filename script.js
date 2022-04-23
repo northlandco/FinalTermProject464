@@ -37,9 +37,6 @@ map.on('click', function(e) {
 });
 
 /* BASELAYERS */
-// use common baselayers below, delete, or add more with plain JavaScript from http://leaflet-extras.github.io/leaflet-providers/preview/
-// .addTo(map); -- suffix displays baselayer by default
-// controlLayers.addBaseLayer (variableName, 'label'); -- adds baselayer and label to legend; omit if only one baselayer with no toggle desired
 var lightAll = new L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	subdomains: 'abcd',
@@ -57,12 +54,6 @@ controlLayers.addBaseLayer(Esri_WorldImagery, 'Esri World Imagery');
 
 
 /* POINT OVERLAYS */
-// ways to load point map data from different sources: coordinates in the code, GeoJSON in local directory, remote GeoJSON and JSON
-// load point geojson data from local directory, using jQuery function (symbolized by $)
-// modify icon source and styling
-// modify pointToLayer marker bindPopup function to display GeoJSON data in info window
-// option to insert '.addTo(map)' to display layer by default
-// insert controlLayers.addOverlay(geoJsonLayer, 'InsertYourTitle') to add to legend
 
 // All Airports
 $.getJSON("src/Airports464.geojson", function (data){
