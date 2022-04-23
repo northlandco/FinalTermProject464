@@ -289,50 +289,108 @@ LATITUDE OF ORIGI: 49 00 00
 use limitations/license: https://open.canada.ca/data/en/dataset/3a1eb6ef-6054-4f9d-b1f6-c30322cd7abf/resource/d805cd5e-b91c-4598-849f-ca2d89f72ed9
 
 ### 8. Canadian National Park Boundaries
-summary/description:
+summary/description: The National Parks and National Park Reserves of Canada Legislative Boundaries web service includes the following lands: 1) National Parks of Canada as defined in Schedule 1 of the Canada National Parks Act, 2) National Park Reserves of Canada as defined in Schedule 2 of the Canada National Parks Act, 3) Rouge National Urban Park as defined in the Rouge National Urban Park Act and 4) Saguenay–St. Lawrence Marine Park as defined in the Saguenay-St. Lawrence Marine Park Act.
 
 spatial data type: Shapefile (.shp)
 
-source/source url(s):
+source/source url(s): https://open.canada.ca/data/en/dataset/9e1507cd-f25c-4c64-995b-6563bf9d65bd/resource/0751aea0-0b6b-4c53-af21-0c2466c30a69
 
-date collected: May 19, 2021
+date collected: July 14, 2021
 
-date published: May 19, 2021
+date published: July 14, 2021
 
 an explanation of each attribute:
+Fields:
+adminAreaId ( type: esriFieldTypeString, alias: Administrative Area Identifier, length: 15 )
+adminAreaNameEng ( type: esriFieldTypeString, alias: Administrative Area Name, length: 200 )
+adminAreaNameAlt1 ( type: esriFieldTypeString, alias: Administrative Area Name Alternate Language, length: 200 )
+adminAreaNameAltLang1 ( type: esriFieldTypeString, alias: Administrative Area Name Alternate Language Code, length: 50 )
+distributionType ( type: esriFieldTypeString, alias: Aboriginal Land Type Code, length: 5 )
+distributionTypeEng ( type: esriFieldTypeString, alias: Aboriginal Land Type Description, length: 100 )
+absoluteAccuracy ( type: esriFieldTypeString, alias: Absolute Accuracy Code, length: 10 )
+absoluteAccuracyEng ( type: esriFieldTypeString, alias: Absolute Accuracy Description, length: 50 )
+adminRegion ( type: esriFieldTypeString, alias: Administrative Region Code, length: 10 )
+adminRegionEng ( type: esriFieldTypeString, alias: Administrative Region Description, length: 100 )
+jurisdiction ( type: esriFieldTypeString, alias: Jurisdiction Code, length: 5 )
+jurisdictionEng ( type: esriFieldTypeString, alias: Jurisdiction Description, length: 60 )
+NID ( type: esriFieldTypeString, alias: National Feature Identifier, length: 20 )
+representationPurpose ( type: esriFieldTypeString, alias: Representation Purpose Code, length: 15 )
+representationPurposeEng ( type: esriFieldTypeString, alias: Representation Purpose Description, length: 100 )
+webReference ( type: esriFieldTypeString, alias: Dataset Download, length: 200 )
+OBJECTID ( type: esriFieldTypeOID, alias: OBJECTID )
+SHAPE ( type: esriFieldTypeGeometry, alias: SHAPE )
 
-spatial resolution: 
+spatial resolution: N/A
 
 coordinate system: Decimal degrees
 
-projection: 
+projection: Spatial Reference: 3979 / "EPSG:3979, NAD83(CSRS) / Canada Atlas Lambert"
 
 extent:
+XMin: -2336824.9573000018
+YMin: -724284.1658000043
+XMax: 2842801.139399997
+YMax: 3827745.4874000014
 
 use limitations/license: https://open.canada.ca/data/en/dataset/3a1eb6ef-6054-4f9d-b1f6-c30322cd7abf/resource/d805cd5e-b91c-4598-849f-ca2d89f72ed9
 
 ### 9. MLB Stadiums
-summary/description:
+summary/description: Major League Baseball (MLB) Stadiums in the United States and Canada.
 
-spatial data type: .csv containing latitude / longitude
+spatial data type: Shapefile (.shp)
 
-source/source url(s):
+source/source url(s): https://www.sciencebase.gov/catalog/item/4f4e4a48e4b07f02db6230c7
 
 date collected: May 19, 2021
 
-date published: May 19, 2021
+date published: 18 February 2010
 
 an explanation of each attribute:
+Fields:
+SHAPE: feature geometry / coordinates defining features
+ROOF_TYPE: This describes what type of roof the stadium has, to include the following:  Open (no roof...open to the air), Dome (non-removable roof), Retractable (moveable roof usually moving all tracks), and Convertible (roof folds up like convertible car roof as opposed to being rolled back.
+Shape: Coordinates defining the features.
+SECTOR: Assets have been categorized by NGA Preparedness Branch analysts and assigned to a primary asset sector, using the HSIP Tiger Team Report, ver. 1.1, of September 2002 as a guideline for categorization.
+SUBSECTOR: Assets have been categorized by NGA Infrastructure Analysis Branch analysts and assigned to an asset subsector, as defined in the HSIP Tiger Team Report, and as modified/expanded by Preparedness Branch analysts to accommodate the given assets
+PRIMARY_TY: The primary organization in charge of the baseball team operating at this site.
+DATE_CREAT: The date, in YYYYMMDD format, when a record was created for the MLB Stadiums.
+COMP_AFFIL: The company affiliation of a site, when known, to show the relationship of a subsidiary to a parent company.
+NAME1: The primary accepted name of a site.
+NAME2: The secondary name of a site, if available.  Can be an unofficial name commonly used for the site.
+NAME3: The tertiary name of a site, if available.  Can be an unofficial name commonly used for the site.
+ADDRESS1: The street address at which a site is physically located, or a street corner at which a site is located.
+ADDRESS2: The second line for a street address, used to indicate a specific building, or a suite number, a room number, or a floor.
+PO_BOX: The Post Office box for a site, if known.
+PO_ZIP: The 5- or 9-digit Zip Code for a site, if known and if different than the Zip Code for the physical address of the site.
+CITY: The city or town in which the site is located.
+STATE: The two letter postal identifier for the state, commonwealth, or territory in which the site is located.
+ZIP: The Zip Code for the site. Principally, this Zip Code is for where the site is physically located, although there exist some exceptions.
+Attribute Definition Source:
+ZIP_4: The Zip+4 for the site, if known, provided, or researched.
+COUNTY: The county, parish, or independent city name in which a site is located.
+FEMA_REGIO: The Federal Emergency Management Agency (FEMA) region in which a site is located.
+LATITUDE: The latitude, in decimal degrees, of a site, to 5 decimal places.
+LONGITUDE: The longitude, in decimal degrees, of a site, to 5 decimal places. Negative numbers in this field are for those locations in the Western Hemisphere.
+LEAGUE: The league in which the baseball teams plays. National or American.
+DIVISION: The league in which the baseball teams plays. National or American.
+CAPACITY: The seating capacity of the stadium for baseball.
+FID: Sequential unique whole numbers that are automatically generated.
 
 spatial resolution: 
+Latitude Resolution: 0.000000
+Longitude Resolution: 0.000000
 
-coordinate system: Decimal degrees
+coordinate system: Decimal degrees / WGS_1984
 
-projection: 
+projection: WGS_1984
 
 extent:
+West Bounding Coordinate: -122.533090
+East Bounding Coordinate: -71.097710
+North Bounding Coordinate: 47.591200
+South Bounding Coordinate: 25.958010
 
-use limitations/license:
+use limitations/license: Downloadable Data / Open Data (USGS)
 
 ### 10. Canadian International Airports 
 summary/description: Canadian airports served by NAV CANADA control towers or flight service station.
