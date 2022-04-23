@@ -30,16 +30,27 @@ Data Manipulation:
 ## Current Layers and Metadata (April 21, 2022) ### (Update when new layer added)
 ### 1. Canadian Airports
 summary/description:
+
 spatial data type: 
+
 source/source url(s):
+
 date collected:
+
 date published:
+
 an explanation of each attribute:
+
 spatial resolution:
+
 coordinate system:
+
 projection:
+
 extent:
+
 use limitations/license:
+
 
 ### 2. Canadian General hospitals
 
