@@ -115,23 +115,6 @@ $.getJSON("src/generalhospitals.geojson", function (data){
   controlLayers.addOverlay(geoJsonLayer, 'General Hospitals');
 });
 
-// Private Schools (Python Computed)
-$.getJSON("src/privateschools.geojson", function (data){
-  var iconStyle = L.icon({
-    iconUrl: "src/publicschoollogo.png",
-    iconRetinaUrl: 'src/publicschoollogo.png',
-    iconSize: [12, 12]
-  });
-  var geoJsonLayer = L.geoJson(data, {
-    pointToLayer: function( feature, latlng) {
-      var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.Facility_Name); 
-      return marker;
-    }
-  }); // insert ".addTo(map)" to display layer by default
-  controlLayers.addOverlay(geoJsonLayer, 'Private Schools');
-});
-
 // NHL Arenas (Python Computed --> Shp to Geojson)
 $.getJSON("src/NHLarenas.geojson", function (data){
   var iconStyle = L.icon({
