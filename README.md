@@ -106,7 +106,6 @@ extent: All of Canada
 
 use limitations/license:  https://open.canada.ca/data/en/dataset/3a1eb6ef-6054-4f9d-b1f6-c30322cd7abf/resource/d805cd5e-b91c-4598-849f-ca2d89f72ed9
 
-
 ### 3. NHL Arenas
 summary/description: latitude and longitude positions of all operational NHL arenas
 
