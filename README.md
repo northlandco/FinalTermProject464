@@ -1,5 +1,5 @@
 # Universal Spatial Data Mapper
-Leaflet Map template to add various geodata layers to. Refer to Python data manipulation, and other documentation for easy data transformation, spatial joins, and more by following the steps used to add the current data to the map. Data is visualized and sptially positioned on the Interactive Web Atlas. 
+Leaflet Map template to add various geodata layers to. Refer to Python data manipulation, and other documentation for easy data transformation, and more by following the steps used to add the current data to the map. Data is visualized and sptially positioned on the Interactive Web Atlas. 
 
 ## Summary of Project
 This interactive web atlas allows for easy data visualization of various spatial data sets. This online tool and the attached code demonstrate how various forms of data, such as .csv and .shp can be imported, manipulated, and converted into a .geojson file. Once a .geojson file has been produced using python, it can be added to the data repository folder /src. A corresponding icon image as a .png will also need to be added to the same folder in order to have a visual icon for that layer. 
