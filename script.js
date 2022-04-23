@@ -68,7 +68,7 @@ controlLayers.addBaseLayer(Esri_WorldImagery, 'Esri World Imagery');
 $.getJSON("src/Airports464.geojson", function (data){
   var iconStyle = L.icon({
     iconUrl: "src/airportlogo.png",
-    iconRetinaUrl: 'src/hospital-18@2x.png',
+    iconRetinaUrl: 'src/airportlogo.png',
     iconSize: [18, 18]
   });
   var geoJsonLayer = L.geoJson(data, {
