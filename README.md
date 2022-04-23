@@ -27,31 +27,39 @@ Data Manipulation:
 - using csv files --> extracting smaller dataset from larger set
 - table join for population, density, and median income statistics for CMA's
 
-## Current Data Layers (April 21, 2022)
+## Current Layers and Metadata (April 21, 2022) ### (Update when new layer added)
 ### 1. Canadian Airports
+summary/description:
+spatial data type: 
+source/source url(s):
+date collected:
+date published:
+an explanation of each attribute:
+spatial resolution:
+coordinate system:
+projection:
+extent:
+use limitations/license:
 
+### 2. Canadian General hospitals
 
-2. Canadian General hospitals
+### 3. NHL Arenas
 
-3. NHL Arenas
+### 4. NFL Stadiums
 
-4. NFL Stadiums
+### 5. Canada Census Metropolitan Area Boundaries
 
-5. Canada Census Metropolitan Area Boundaries
+### 6. First Nations in Canada
 
-6. Canadian First Nations 
+### 7. Canadian Major Mining Sites
 
-7. Canadian Major Mining Sites
+### 8. Canadian National Park Boundaries
 
-8. Canadian National Park Boundaries
+### 9. 
 
-9. Canadian International Airports
-
-10. ***
+### 10. Canadian International Airports 
 
 
 ## Conclusion
-
-## Metadata of Current Layers (April 21, 2022)
 
 
