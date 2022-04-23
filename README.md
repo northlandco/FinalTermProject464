@@ -16,61 +16,272 @@ This project was created in order to allow individuals across various fields to 
 Suppose a real estate agent has a client who is trying to determine which city or neighbourhood they would like to live in. This client has various factors that are important to making their choice. By adding the various spatial data sets to the map, a visual representation of their spatial distribution can be derived, offering an interactive map with their various important factors appearing. This could allow the client to easily visualize where they would like to live.
 
 ## Python Coding
-The termpython.ipynb file attached to this repository outlines and shows various lines of code that were used to manipulate and convert various data forms into the required .geojson file format for use in this web atlas. 
+The PythonConversions.ipynb file attached to this repository outlines and shows various lines of code that were used to manipulate and convert various data forms into the required .geojson file format for use in this web atlas. 
+
+The conversions and maniupulations shown can be very easily reproduced with new data to in order to create new .geojson files for use in the atlas. 
+
+
+When importing a .csv  file with latitiude and longitude columns, we will want to read it in and store it as a new variable. This will allow us to call it in the following lines of code. Once it has been read in, a line of code is ran to fill in any blank values. This helps clean up the dataset, and minimizes our chance for error when we begin doing analyses on the dataset. When looking at the first lines and dataset imported in the PythonConversions.ipynb file, for Canadian Airports, we created a new dataset and layer that narrowed down the airports to just those that were international. This was done by looking at the datasets column which indicated the airport types (International, Regional, ....etc.) and searching for the string 'International'. Another example of this step and the changes that would be required to reproduce it can be seen in the liens of code for "General Hospitals".
+
+
+
 
 Conversions:
 - .csv to geojson
 - shp to geojson
-- 
+- .csv manipulation
 
 Data Manipulation:
 - using csv files --> extracting smaller dataset from larger set
 - table join for population, density, and median income statistics for CMA's
 
+## Conclusion
+In conclusion, this repository can be used as a template for anyone looking to map out spatial data from various sources and in various forms, into one interactive web atlas. The process and steps required to add layers and customize the map are made very easy through use of this template, and will allow beginners to spatial data mapping, coding, and other computer processes to very easily create their own interactive web atlas. 
+
 ## Current Layers and Metadata (April 21, 2022) ### (Update when new layer added)
-### 1. Canadian Airports
+### 1. Canadian Airports - "Canadian Airports with Air Navigation Services"
+
+summary/description: 	Canadian airports served by NAV CANADA control towers or flight service station.
+
+spatial data type: 	Map Service
+
+source/source url(s): https://open.canada.ca/data/en/dataset/3a1eb6ef-6054-4f9d-b1f6-c30322cd7abf/resource/d805cd5e-b91c-4598-849f-ca2d89f72ed9
+
+date collected: May 19, 2021
+
+date published: May 19, 2021
+
+an explanation of each attribute:
+Fields:
+      Shape ( type: esriFieldTypeGeometry, alias: Shape )
+      TC_ID ( type: esriFieldTypeDouble, alias: Identifier )
+      IATA ( type: esriFieldTypeString, alias: International Air Transport Association Airport (IATA) Code, length: 254 )
+      ICAO ( type: esriFieldTypeString, alias: International Civil Aviation Organization (ICAO) Code, length: 254 )
+      TYPE ( type: esriFieldTypeString, alias: Airport Type, length: 254 )
+      TYPE_CODE ( type: esriFieldTypeDouble, alias: Airport Type Code )
+      AIRPORT ( type: esriFieldTypeString, alias: Airport Name, length: 254 )
+      CITY ( type: esriFieldTypeString, alias: City, length: 254 )
+      PROVINCE ( type: esriFieldTypeString, alias: Province, length: 254 )
+      LATTITUDE ( type: esriFieldTypeDouble, alias: Lattitude )
+      LONGITUDE ( type: esriFieldTypeDouble, alias: Longitude )
+      OBJECTID ( type: esriFieldTypeOID, alias: Unique identifier )
+
+spatial resolution: 
+
+coordinate system: NAD_1983_Canada_Atlas_Lambert
+
+projection: NAD_1983_Canada_Atlas_Lambert
+
+extent: 	[[-146.108061782699,36.4810686346204],[-34.2795533650949,72.4613643971491]]
+
+use limitations/license: 	Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)
+
+
+### 2. Canadian General hospitals
 summary/description:
 
-spatial data type: 
+spatial data type: 	
 
 source/source url(s):
 
-date collected:
+date collected: May 19, 2021
 
-date published:
+date published: May 19, 2021
 
 an explanation of each attribute:
 
-spatial resolution:
+spatial resolution: 
 
-coordinate system:
+coordinate system: 
 
-projection:
+projection: 
 
 extent:
 
 use limitations/license:
 
-
-### 2. Canadian General hospitals
-
 ### 3. NHL Arenas
+summary/description:
+
+spatial data type: 	
+
+source/source url(s):
+
+date collected: May 19, 2021
+
+date published: May 19, 2021
+
+an explanation of each attribute:
+
+spatial resolution: 
+
+coordinate system: 
+
+projection: 
+
+extent:
+
+use limitations/license:
 
 ### 4. NFL Stadiums
+summary/description:
+
+spatial data type: 	
+
+source/source url(s):
+
+date collected: May 19, 2021
+
+date published: May 19, 2021
+
+an explanation of each attribute:
+
+spatial resolution: 
+
+coordinate system: 
+
+projection: 
+
+extent:
+
+use limitations/license:
 
 ### 5. Canada Census Metropolitan Area Boundaries
+summary/description:
+
+spatial data type: 	
+
+source/source url(s):
+
+date collected: May 19, 2021
+
+date published: May 19, 2021
+
+an explanation of each attribute:
+
+spatial resolution: 
+
+coordinate system: 
+
+projection: 
+
+extent:
+
+use limitations/license:
 
 ### 6. First Nations in Canada
+summary/description:
+
+spatial data type: 	
+
+source/source url(s):
+
+date collected: May 19, 2021
+
+date published: May 19, 2021
+
+an explanation of each attribute:
+
+spatial resolution: 
+
+coordinate system: 
+
+projection: 
+
+extent:
+
+use limitations/license:
 
 ### 7. Canadian Major Mining Sites
+summary/description:
+
+spatial data type: 	
+
+source/source url(s):
+
+date collected: May 19, 2021
+
+date published: May 19, 2021
+
+an explanation of each attribute:
+
+spatial resolution: 
+
+coordinate system: 
+
+projection: 
+
+extent:
+
+use limitations/license:
 
 ### 8. Canadian National Park Boundaries
+summary/description:
 
-### 9. 
+spatial data type: 	
+
+source/source url(s):
+
+date collected: May 19, 2021
+
+date published: May 19, 2021
+
+an explanation of each attribute:
+
+spatial resolution: 
+
+coordinate system: 
+
+projection: 
+
+extent:
+
+use limitations/license:
+
+### 9. MLB Stadiums
+summary/description:
+
+spatial data type: 	
+
+source/source url(s):
+
+date collected: May 19, 2021
+
+date published: May 19, 2021
+
+an explanation of each attribute:
+
+spatial resolution: 
+
+coordinate system: 
+
+projection: 
+
+extent:
+
+use limitations/license:
 
 ### 10. Canadian International Airports 
+summary/description:
 
+spatial data type: 	
 
-## Conclusion
+source/source url(s):
 
+date collected: May 19, 2021
 
+date published: May 19, 2021
+
+an explanation of each attribute:
+
+spatial resolution: 
+
+coordinate system: 
+
+projection: 
+
+extent:
+
+use limitations/license:
+
+---------------------------------------------------------------------------------------------------------------
