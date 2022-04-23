@@ -1,4 +1,4 @@
-
+//UniversalSpatialDataMapper Javascript
 
 // set up the map center and zoom level
 var map = L.map('map', {
@@ -74,7 +74,7 @@ $.getJSON("src/Airports464.geojson", function (data){
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
       var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.coordinates); // replace 'Location' with properties data label from your GeoJSON file
+      marker.bindPopup(feature.properties.coordinates); // replace with properties data label from your GeoJSON file if applicable
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
@@ -91,7 +91,7 @@ $.getJSON("src/internationalairports.geojson", function (data){
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
       var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.coordinates); // replace 'Location' with properties data label from your GeoJSON file
+      marker.bindPopup(feature.properties.coordinates); // replace with properties data label from your GeoJSON file if applicable
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
@@ -108,7 +108,7 @@ $.getJSON("src/generalhospitals.geojson", function (data){
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
       var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.facility_name); // replace 'Location' with properties data label from your GeoJSON file
+      marker.bindPopup(feature.properties.facility_name); // replace with properties data label from your GeoJSON file if applicable
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
@@ -125,7 +125,7 @@ $.getJSON("src/NHLarenas.geojson", function (data){
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
       var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.coordinates); 
+      marker.bindPopup(feature.properties.coordinates); // replace with properties data label from your GeoJSON file if applicable
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
@@ -142,7 +142,7 @@ $.getJSON("src/firstnations.geojson", function (data){
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
       var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.coordinates); 
+      marker.bindPopup(feature.properties.coordinates); // replace with properties data label from your GeoJSON file if applicable
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
@@ -159,7 +159,7 @@ $.getJSON("src/nflstadiums.geojson", function (data){
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
       var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.Team); 
+      marker.bindPopup(feature.properties.Team); // replace with properties data label from your GeoJSON file if applicable
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
@@ -176,7 +176,7 @@ $.getJSON("src/mining68.geojson", function (data){
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
       var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.coordinates); 
+      marker.bindPopup(feature.properties.coordinates); // replace with properties data label from your GeoJSON file if applicable
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
@@ -193,7 +193,7 @@ $.getJSON("src/mlbstadiums.geojson", function (data){
   var geoJsonLayer = L.geoJson(data, {
     pointToLayer: function( feature, latlng) {
       var marker = L.marker(latlng,{icon: iconStyle});
-      marker.bindPopup(feature.properties.coordinates); 
+      marker.bindPopup(feature.properties.coordinates); // replace with properties data label from your GeoJSON file if applicable
       return marker;
     }
   }); // insert ".addTo(map)" to display layer by default
@@ -227,7 +227,7 @@ $.getJSON("src/newnationalparks.geojson", function (data){
 });
 
 //CMA Boundaries
-$.getJSON("src/CMABoundary.geojson", function (data) {   // insert pathname to your local directory file
+$.getJSON("src/CMABoundary.geojson", function (data) {   
   var geoJsonLayer = L.geoJson(data, {
     style: function (feature) {
       return {
@@ -238,7 +238,7 @@ $.getJSON("src/CMABoundary.geojson", function (data) {   // insert pathname to y
       }
     },
     onEachFeature: function( feature, layer) {
-      layer.bindPopup(feature.properties.CMA_NAME) // change 'Town' to match your geojson property labels
+      layer.bindPopup(feature.properties.CMA_NAME) // replace with properties data label from your GeoJSON file if applicable
     }
   });  // insert ".addTo(map)" to display layer by default
   controlLayers.addOverlay(geoJsonLayer, 'CMA Boundary'); 
