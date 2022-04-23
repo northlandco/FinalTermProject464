@@ -4,7 +4,7 @@ Leaflet Map template to add various geodata layers to. Refer to Python data mani
 ## Summary of Project
 This interactive web atlas allows for easy data visualization of various spatial data sets. This online tool and the attached code demonstrate how various forms of data, such as .csv and .shp can be imported, manipulated, and converted into a .geojson file. Once a .geojson file has been produced using python, it can be added to the data repository folder /src. A corresponding icon image as a .png will also need to be added to the same folder in order to have a visual icon for that layer. 
 
-Once converted into a .geojson by following the steps outlined, it can be added to the interactive web atlas with its own section on the legend where the layer can be toggled on or off, by following/copying the codes found in the script.js file. Depending on the data types (point, line, or polygon), the user simple has to find the corresponding title and nderneath will find that code to add it to the map. All that needs to be changed is the input file name to the newly created .geojson file, to change the icon image to the newly added/corresponding .png, and finally to give this layer a legend title.
+Once converted into a .geojson by following the steps outlined, it can be added to the interactive web atlas with its own section on the legend where the layer can be toggled on or off, by following/copying the codes found in the script.js file. Depending on the data types (point, line, or polygon), the user simple has to find the corresponding title and nderneath will find that code to add it to the map. All that needs to be changed is the input file name to the newly created .geojson file, to change the icon image to the newly added/corresponding .png, and finally to give this layer a legend title. There is also a popup feature that has been coded in, which allows for data from the geojson to be displayed on the Popup. This can be done to show the facility or location name, or any other descriptive info attributed to each location. This can be specified by looking at the 'properties' section of each data point or polygon. 
 
 Once the JS code has been edited, the newly added layer should appear in the legend toggled off. It can simply be toggled on, and a spatial representation of the data can be observed on the map. The map offers the ability to switch between the CartoDB Light baselayer, and the Esri World Imagery Sattelite baselayer.
 
@@ -66,18 +66,35 @@ extent: 	[[-146.108061782699,36.4810686346204],[-34.2795533650949,72.46136439714
 use limitations/license: 	Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)
 
 
-### 2. Canadian General hospitals
-summary/description:
+### 2. Canadian General hospitals (from: Open Data Base of Healthcare Facilities (ODHF)
+summary/description: The Open Database of Healthcare Facilities (ODHF) is a Canada-wide healthcare facilities database. It has 
+been compiled by the Centre for Special Business Projects (CSBP) at Statistics Canada.
 
-spatial data type: 	
+spatial data type: .csv file 	
 
-source/source url(s):
+source/source url(s): https://www.statcan.gc.ca/en/lode/databases/odhf
 
-date collected: May 19, 2021
+date collected: November 2019 - March 2020
 
-date published: May 19, 2021
+date published: August 7, 2020
 
 an explanation of each attribute:
+Fields:
+      Index - unique serial number for each facility
+      facility_name: name of facility
+      source_facility_type: regional health authroity assigned healthcare facility type
+      odhf_facility_type: odhf assigned healthcare facility type through classification
+      provider: identity or name of data provider
+      unit number: civic unit or suite number
+      street_no: civic street number
+      postal_code: civic postal code
+      city: city name
+      province/territory: province or territory name
+      source_format_str_address: street address in source data
+      CSDname: census subdivision name
+      CSDuid: census subdivision unique identifier
+      latitude: latitude value for location
+      longitude: longitude value for location
 
 spatial resolution: 
 
@@ -85,12 +102,13 @@ coordinate system:
 
 projection: 
 
-extent:
+extent: All of Canada
 
-use limitations/license:
+use limitations/license:  https://open.canada.ca/data/en/dataset/3a1eb6ef-6054-4f9d-b1f6-c30322cd7abf/resource/d805cd5e-b91c-4598-849f-ca2d89f72ed9
+
 
 ### 3. NHL Arenas
-summary/description:
+summary/description: latitude and longitude positions of all operational NHL arenas
 
 spatial data type: 	
 
@@ -108,22 +126,32 @@ coordinate system:
 
 projection: 
 
-extent:
+extent: All of Canada and the United States of America
 
 use limitations/license:
+
+metadata info source (missing info for above): https://www.statcan.gc.ca/en/lode/databases/odhf/metadata
 
 ### 4. NFL Stadiums
 summary/description:
 
 spatial data type: 	
 
-source/source url(s):
+source/source url(s): https://github.com/Sinbad311/CloudProject/blob/master/NFL%20Stadium%20Latitude%20and%20Longtitude.csv
 
-date collected: May 19, 2021
+date collected: 
 
-date published: May 19, 2021
+date published: November 27, 2012
 
 an explanation of each attribute:
+Fields:
+      Team: Team name
+      Conference: NFL conference the team plays in (AFC or NFC)
+      Latitude: latitude value for stadium location
+      Longitude: longitude value for stadium location
+      Zip: zip code number
+      pic:
+      g:
 
 spatial resolution: 
 
@@ -131,32 +159,43 @@ coordinate system:
 
 projection: 
 
-extent:
+extent: United States of America 
 
-use limitations/license:
+use limitations/license: none
 
 ### 5. Canada Census Metropolitan Area Boundaries
-summary/description:
+summary/description: The 2016 Census Boundary Files depict boundaries of standard geographic areas established for the purpose of 
+disseminating census data
 
-spatial data type: 	
+spatial data type:  	
 
-source/source url(s):
+source/source url(s): https://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2016-eng.cfm
 
-date collected: May 19, 2021
+date collected: 2016 Census Year
 
-date published: May 19, 2021
+date published: September 13, 2017
 
 an explanation of each attribute:
-
+Fields:
+      FID: field id/object ID
+      Shape: geometry
+      DigitalBoundary: MultiPolygon shape indicating geographic layout of polygon
+      CMAUID: uniquely identifies a census metropolitan area/census agglomeration
+      CMAPUID: uniquely identifies the province/territory of a census metropolitan area
+      CMANAME: census metropolitan area or census agglomeration name
+      CMATYPE: a one character field indicating whether the unit is a census metropolitan area, a tracted census agglomeration, or a nonn-tracted census agglomeration
+      PRUID: uniquely identifies a province or territory
+      PRNAME province or territory name
+ 
 spatial resolution: 
 
-coordinate system: 
+coordinate system: GPS Coordinates (lat,lon) / North American Datum of 1983 [NAD83]
 
-projection: 
+projection: North American Datum of 1983 [NAD83]
 
-extent:
+extent: All of Canada
 
-use limitations/license:
+use limitations/license: https://open.canada.ca/data/en/dataset/3a1eb6ef-6054-4f9d-b1f6-c30322cd7abf/resource/d805cd5e-b91c-4598-849f-ca2d89f72ed9
 
 ### 6. First Nations in Canada
 summary/description:
@@ -179,7 +218,7 @@ projection:
 
 extent:
 
-use limitations/license:
+use limitations/license: https://open.canada.ca/data/en/dataset/3a1eb6ef-6054-4f9d-b1f6-c30322cd7abf/resource/d805cd5e-b91c-4598-849f-ca2d89f72ed9
 
 ### 7. Canadian Major Mining Sites
 summary/description:
@@ -202,7 +241,7 @@ projection:
 
 extent:
 
-use limitations/license:
+use limitations/license: https://open.canada.ca/data/en/dataset/3a1eb6ef-6054-4f9d-b1f6-c30322cd7abf/resource/d805cd5e-b91c-4598-849f-ca2d89f72ed9
 
 ### 8. Canadian National Park Boundaries
 summary/description:
@@ -225,7 +264,7 @@ projection:
 
 extent:
 
-use limitations/license:
+use limitations/license: https://open.canada.ca/data/en/dataset/3a1eb6ef-6054-4f9d-b1f6-c30322cd7abf/resource/d805cd5e-b91c-4598-849f-ca2d89f72ed9
 
 ### 9. MLB Stadiums
 summary/description:
@@ -251,9 +290,9 @@ extent:
 use limitations/license:
 
 ### 10. Canadian International Airports 
-summary/description: 	Canadian airports served by NAV CANADA control towers or flight service station.
+summary/description: Canadian airports served by NAV CANADA control towers or flight service station.
 
-spatial data type: 	Map Service
+spatial data type: Map Service
 
 source/source url(s): https://open.canada.ca/data/en/dataset/3a1eb6ef-6054-4f9d-b1f6-c30322cd7abf/resource/d805cd5e-b91c-4598-849f-ca2d89f72ed9
 
@@ -282,8 +321,8 @@ coordinate system: NAD_1983_Canada_Atlas_Lambert
 
 projection: NAD_1983_Canada_Atlas_Lambert
 
-extent: 	[[-146.108061782699,36.4810686346204],[-34.2795533650949,72.4613643971491]]
+extent: [[-146.108061782699,36.4810686346204],[-34.2795533650949,72.4613643971491]]
 
-use limitations/license: 	Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)
+use limitations/license: Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)
 
 ---------------------------------------------------------------------------------------------------------------
